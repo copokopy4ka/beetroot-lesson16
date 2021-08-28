@@ -1,0 +1,27 @@
+.works {
+    .container {
+        width: 100%;
+        max-width: 1170px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+    &__title {
+        //font-family: 10px;
+        font-size: 34px;
+        line-height: 36px;
+        //color: ;
+        // margin-bottom: ;
+        text-align: center;
+        padding-top: 95px;
+        margin-bottom: 106px;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__item {
+        padding-bottom: 50px;
+        width: 31%;
+    }
+}
