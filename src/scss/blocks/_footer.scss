@@ -1,0 +1,24 @@
+.container {
+    max-width: 1960px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    background-color: #f1f8ff;
+  }
+
+.footer {
+    &__row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+&__column {
+    width: 75%;
+
+    &__button{
+    width: 25%; 
+    }
+
+}
+}

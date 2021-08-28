@@ -1,0 +1,63 @@
+.container {
+    max-width: 1960px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    background-color: #f1f8ff;
+  }
+
+.clients {
+    &__title {
+        margin: 0 auto;
+        text-align: center; 
+        font-size: 50px;
+        padding-top: 100px;
+        font-family: $lato-light;
+        color: $blue-title;
+    }
+
+    &__holder {
+        margin: 0 auto;
+        max-width: 1170px;
+        padding: 60px 0 100px;
+
+        @include breakpoint ($tablet-bp){
+            padding:40px 0 60px;
+        }
+
+        @include breakpoint ($mobile-bp){
+            padding:20px 0 40px;
+        }
+    }
+
+    &__holder-items {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include breakpoint ($tablet-bp){
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @include breakpoint ($mobile-bp){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        width: 280px;
+        padding: 30px;
+
+        @include breakpoint ($mobile-bp){
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+}
