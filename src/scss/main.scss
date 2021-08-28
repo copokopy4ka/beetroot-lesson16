@@ -7,6 +7,9 @@
 @import 'pages/home/index';
 @import 'blocks/footer';
 
+@import 'pages/expert';
+
+
 * {
     padding: 0;
     margin: 0;
@@ -73,7 +76,6 @@ button::-moz-focus-inner {
 a {
     display: block;
 }
-
 a, a:visited {
     text-decoration: none;
 }
