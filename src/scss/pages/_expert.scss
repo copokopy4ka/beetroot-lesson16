@@ -20,6 +20,14 @@
         margin: 0 auto;
         max-width: 1170px;
         padding:15px 0 100px;
+
+        @include breakpoint ($tablet-bp){
+            padding:15px 0 60px;
+        }
+
+        @include breakpoint ($mobile-bp){
+            padding:15px 0 40px;
+        }
     }
 
     &__holder-items {
@@ -41,6 +49,16 @@
     &__holder-item {
         max-width: 370px;
         padding: 100px 15px 30px;
+        
+        @include breakpoint ($tablet-bp){
+            max-width: 370px;
+            padding: 60px 15px 30px;
+        }
+
+        @include breakpoint ($mobile-bp){
+            width: 100%;
+            padding: 40px 15px 30px;
+        }
     }
 
     &__icon-holder {
