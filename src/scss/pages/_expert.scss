@@ -65,13 +65,23 @@
         width: 140px;
         height: 140px;
         margin: 0 auto;
+
+        @include breakpoint ($mobile-bp){
+            width: 90px;
+            height: 90px;
+        }
     }
 
     &__icon {
         font-size: 54px;
         color: $text-blue;
         font-weight: bold;
+
+        @include breakpoint ($mobile-bp){
+            font-size: 42px;
+        }
     }
+
     &__text-holder {
         font-size: 16px;
         text-align: center;
