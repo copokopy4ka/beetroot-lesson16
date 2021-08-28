@@ -1,3 +1,107 @@
 .intro {
     padding: 95px 0 25px;
+    background: linear-gradient(39deg, rgba(54,149,255,1) 0%,rgba(53,100,252,1) 100%);
+
+    @include breakpoint($mobile-bp) {
+        padding: 45px 0 15px;
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__circle {
+        width: 185px;
+        height: 185px;
+        background-color: rgb(255, 255, 255, .06);
+        border-radius: 50%;
+        margin: 0 0 50px;
+        position: relative;
+
+        @include breakpoint($mobile-bp) {
+            width: 120px;
+            height: 120px;
+            margin: 0 0 20px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255, .07);
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 18px;
+            bottom: 18px;
+            left: 18px;
+            right: 18px;
+            border-radius: 50%;
+            background-color: #fff;
+            transition: color .2s linear;
+        }
+    }
+
+    &__titleholder {
+        max-width: 850px;
+        text-align: center;
+        margin: 0 0 75px;
+
+        @include breakpoint($mobile-bp) {
+            margin: 0 0 35px;
+        }
+    }
+
+    &__title {
+        font-size: 50px;
+        font-weight: 900;
+        color: $text-white;
+        line-height: 60px;
+        letter-spacing: .025em;
+        margin: 0 0 40px;
+        text-transform: uppercase;
+
+        @include breakpoint($mobile-bp) {
+            font-size: 30px;
+            line-height: 40px;
+            margin: 0 0 20px;
+        }
+    }
+
+    &__subtitle {
+        color: $text-white;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 35px;
+        letter-spacing: .025em;
+
+        @include breakpoint($mobile-bp) {
+            font-size: 13px;
+            line-height: 22px;
+        }
+    }
+
+    &__arrow {
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 32px;
+        transition: color .2s linear;
+
+
+        @include breakpoint($mobile-bp) {
+            font-size: 22px;
+        }
+
+        &:hover {
+            color: #fff;
+        }
+    }
 }

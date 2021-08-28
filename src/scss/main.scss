@@ -1,5 +1,6 @@
 @import 'vars';
 @import 'fonts/lato';
+@import 'fonts/icon-intro';
 @import 'mixins';
 
 @import 'blocks/header';
@@ -69,6 +70,10 @@ button::-moz-focus-inner {
     border: 0;
 }
 
+a {
+    display: block;
+}
+
 a, a:visited {
     text-decoration: none;
 }
@@ -109,6 +114,7 @@ p {
 }
 
 .btn {
+    display: inline-block;
     background-color: #fff;
     outline: none;
     border: none;
@@ -126,5 +132,10 @@ p {
         padding: 9px 35px;
         font-size: 12px;
         color: #194277;
+    }
+
+    &_intro {
+        text-transform: uppercase;
+        margin: 0 0 90px;
     }
 }
