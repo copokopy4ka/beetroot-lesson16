@@ -1,0 +1,16 @@
+.footer {
+    &__row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+&__column {
+    width: 75%;
+
+    &__button{
+    width: 25%; 
+    }
+
+}
+}
