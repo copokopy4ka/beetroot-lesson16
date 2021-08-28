@@ -1,0 +1,146 @@
+.header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 85px 20px 0;
+
+    &.active {
+        .containerer {
+            visibility: visible;
+        }
+        .header__lang-btn {
+            visibility: visible;
+        }
+    }
+    .container {
+        position: relative;
+        z-index: 11;
+        width: 100%;
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+
+    .containerer {
+        position: relative;      
+        background-color: $white;
+        border-radius: 10px;
+        visibility: hidden;
+        transition: ease-in-out 0.3s;
+    }
+    
+    &__nav {
+        width: 100%;
+        max-width: 420px;
+        padding: 0 10px;
+        margin: 0 auto;
+    }
+    &__nav-list {
+        list-style: none;        
+        padding: 90px 20px 80px;
+        border-bottom: 1px solid $header-ligth-grey;
+        
+    }
+    &__nav-item {
+        padding-bottom: 50px;
+        text-align: center;
+    }
+    &__nav-link {
+        font-family: $lato;
+        font-size: 50px;
+        font-weight: 300;
+        font-style: normal;
+        color: $header-ligth-grey;
+
+        &:hover {
+            color: $header-hover;
+        }
+    }
+    &__social-list {
+        list-style: none;
+        width: 100%;
+        max-width: 420px;
+        padding: 75px 30px 70px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    &__social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $header-ligth-grey;
+        color: $white;
+        width: 51px;
+        height: 51px;
+        border-radius: 50%;
+        font-size: 25px;
+
+        &:hover {
+            background-color: $header-hover;
+            font-size: 30px;
+        }
+    }
+    &__burger-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 27px;
+        height: 20px;
+        background: none;
+        outline: none;
+        visibility: visible;
+        
+        span,
+        &::before,
+        &::after {            
+            border-bottom: 3px solid $burger-color;
+            border-radius: 3px;
+            width: 100%;
+
+        }
+        span {
+            display: block;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        &:hover {
+            span,
+            &::before,
+            &::after {
+                border-bottom: 3px solid $header-hover;
+            }
+        }
+    }
+    &__lang-btn {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        color: $header-ligth-grey;
+        background: none;
+        outline: none;
+        font-family: $lato;
+        font-weight: 400;
+        display: flex;
+        padding: 10px 15px;
+        visibility: hidden;
+        
+        img {
+            margin-left: 10px;
+        }
+        &:hover {
+            background-color: $header-hover;
+        }
+    }
+}
