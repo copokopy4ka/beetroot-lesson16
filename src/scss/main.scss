@@ -4,11 +4,8 @@
 @import 'mixins';
 @import 'fonts';
 @import 'blocks/header';
-@import 'pages/home/index';
 @import 'blocks/footer';
-
 @import 'pages/expert';
-
 
 * {
     padding: 0;
@@ -50,8 +47,6 @@ body {
     font-size: 14px;
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
-    -webkit-text-size-adjust:100%;
-    font-family: 'lato';
 }
 
 input,
@@ -99,7 +94,12 @@ img {
     display: block;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-size: inherit;
     font-weight: 400;
 }
