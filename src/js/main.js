@@ -7,3 +7,12 @@ $(document).ready(function () {
         }
     })
 })
+$(document).ready(function () {
+    $('.js-btn-close').on('click', function () {
+        if ($('.js-intro').hasClass('active')) {
+            $('.js-intro').removeClass('active');
+        } else {
+            $('.js-intro').addClass('active');
+        }
+    })
+})
