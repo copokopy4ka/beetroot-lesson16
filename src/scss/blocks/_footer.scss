@@ -3,22 +3,59 @@
     width: 100%;
     padding: 0 15px;
     margin: 0 auto;
-    background-color: #f1f8ff;
+    
   }
 
 .footer {
-    &__row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+    &__container {
+        background-color: #3c94ff;
+        min-height: 242px;
+        padding: 60px 0;
 
-&__column {
-    width: 75%;
+        @include breakpoint ($tablet-bp){
+            padding: 40px 0;
 
-    &__button{
-    width: 25%; 
+        }
+
+        @include breakpoint ($mobile-bp){
+            padding: 20px 0;
+
+        }
     }
 
-}
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+
+    &__column {
+        width: 70%;
+        padding: 0 15px 30px;
+        font-size: 50px;
+        font-family: $lato-light;
+        color: white; 
+        text-align: center;
+
+    &_button {
+        max-width: 205px;
+    }
+    }
+
+    &__ready {
+        font-family: $lato-bold;
+    }
+
+    &__btn {
+        width: 100%;
+        background-color: white;
+        padding: 20px 0;
+        font-size: 16px;
+        font-family: $lato-bold;
+        border: none;
+        border-radius: 25px;
+        color: $blue-title;
+        text-align: center;
+    }
 }
