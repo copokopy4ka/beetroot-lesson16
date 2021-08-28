@@ -1,12 +1,6 @@
-.container {
-    max-width: 1960px;
-    width: 100%;
-    padding: 0 15px;
-    margin: 0 auto;
-    background-color: #f1f8ff;
-  }
-
 .expert {
+    background-color: #f1f8ff;
+
     &__title {
         margin: 0 auto;
         text-align: center; 
@@ -69,12 +63,12 @@
         justify-content: center;
         width: 140px;
         height: 140px;
-        margin: 0 auto; 
+        margin: 0 auto;
     }
 
     &__icon {
         font-size: 54px;
-        color: black;
+        color: $text-blue;
         font-weight: bold;
     }
     &__text-holder {
