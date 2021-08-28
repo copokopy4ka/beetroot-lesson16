@@ -1,16 +1,41 @@
 .footer {
-    &__row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+    background-color: #3c94ff;
+    padding: 45px 0;
 
-&__column {
-    width: 75%;
-
-    &__button{
-    width: 25%; 
+    @include breakpoint ($tablet-bp){
+        padding: 30px 0;
     }
 
-}
+    @include breakpoint ($mobile-bp){
+        padding: 10px 0;
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+    &__column {
+        font-weight: 300;
+        padding: 15px;
+        font-size: 38px;
+        color: white; 
+        text-align: center;
+
+        span {
+            font-weight: 700;
+        }
+
+        @include breakpoint ($tablet-bp){
+            width: 100%;
+            font-size: 32px;
+        }
+
+        @include breakpoint ($mobile-bp){
+            width: 100%;
+            font-size: 24px;
+        }
+    }
 }
