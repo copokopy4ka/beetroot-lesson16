@@ -1,54 +1,58 @@
 .clients {
+    padding: 90px 0 100px;
+    text-align: center;
+    background-color: #f1f8ff;
+
     &__title {
-        margin: 0 auto;
-        text-align: center; 
         font-size: 50px;
-        padding-top: 100px;
-        font-family: $lato-light;
+        font-weight: 300;
+        margin: 0 0 75px;
         color: $blue-title;
+
+        @include breakpoint($tablet-bp) {
+            font-size: 40px;
+        }
+
+        @include breakpoint($mobile-bp) {
+            font-size: 30px;
+            margin: 0 0 50px;
+        }
+
     }
 
     &__holder {
-        margin: 0 auto;
-        max-width: 1170px;
-        padding: 60px 0 100px;
-
-        @include breakpoint ($tablet-bp){
-            padding:40px 0 60px;
-        }
-
-        @include breakpoint ($mobile-bp){
-            padding:20px 0 40px;
-        }
-    }
-
-    &__holder-items {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-
-        @include breakpoint ($tablet-bp){
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        @include breakpoint ($mobile-bp){
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
     }
 
     &__item {
-        width: 280px;
-        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 280px;
+        width: 25%;
+        padding: 0 50px;
+        filter: brightness(0);
+        opacity: .3;
+        transition: all .5s linear;
 
-        @include breakpoint ($mobile-bp){
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+        &:hover {
+            filter: brightness(1);
+            opacity: 1;
+        }
+        
+        @include breakpoint($tablet-bp) {
+            padding: 0 20px;
+        }
+
+        @include breakpoint($mobile-bp) {
+            width: 50%;
+            padding: 0 15px 60px;
+
+            &:nth-child(1n + 3) {
+                padding: 0 15px;
+            }
         }
     }
 
