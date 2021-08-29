@@ -3,7 +3,7 @@
     background: linear-gradient(39deg, rgba(54,149,255,1) 0%,rgba(53,100,252,1) 100%);
 
     @include breakpoint($mobile-bp) {
-        padding: 45px 0 15px;
+        padding: 120px 0 15px;
     }
 
     &__row {
@@ -51,6 +51,7 @@
             right: 18px;
             border-radius: 50%;
             background-color: #fff;
+            z-index: 0;
         }
     }
 
@@ -150,12 +151,17 @@
         }
     }
     &__input {
-        width: 70%;
-        min-width: 300px;
+        max-width: 70%;
+        width: 100%;
         border: 1px solid $header-ligth-grey;
         border-radius: 10px;
         margin: 0 auto 20px;
         padding: 10px;
+
+        @include breakpoint($mobile-bp) {
+            max-width: 70%;
+            width: 100%;
+        }
     }
     textarea {
         margin-bottom: 45px;

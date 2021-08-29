@@ -1,6 +1,12 @@
 .cooki {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     background-color: $cooki-bg;
     padding: 22px 0;
+    visibility: visible;
+    z-index: 111;
 
     @include breakpoint($mobile-bp) {
         padding: 15px 0;
