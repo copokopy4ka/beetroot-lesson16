@@ -85,12 +85,12 @@
         color: $header-ligth-grey;
         transition: color .2s linear;
 
-        @include breakpoint($mobile-bp) {
-            font-size: 24px;
-        }
-
         &:hover {
             color: $header-hover;
+        }
+
+        @include breakpoint($mobile-bp) {
+            font-size: 24px;
         }
     }
 
@@ -105,7 +105,20 @@
         justify-content: space-evenly;
 
         @include breakpoint($mobile-bp) {
-            padding: 40px 0 60px;
+            justify-content: center;
+            padding: 80px 0 80px;
+        }
+    }
+
+    &__social-item {
+        padding: 0;
+
+        @include breakpoint($mobile-bp) {
+            padding: 0 20px 0 0;
+
+            &:last-child {
+                padding: 0;
+            }
         }
     }
 
@@ -121,16 +134,18 @@
         font-size: 25px;
         transition: all .2s linear;
 
-        @include breakpoint($mobile-bp) {
-            font-size: 15px;
-            width: 30px;
-            height: 30px;
-        }
-
-
         &:hover {
             background-color: $header-hover;
+        }
+
+        @include breakpoint($mobile-bp) {
             font-size: 16px;
+            width: 35px;
+            height: 35px;
+
+            &:hover {
+                background-color: $header-hover;
+            }
         }
     }
 
@@ -191,15 +206,19 @@
         outline: none;
         font-family: $lato;
         font-weight: 400;
+        text-transform: uppercase;
         display: flex;
+        align-items: center;
         padding: 10px 15px;
         visibility: hidden;
+        opacity: .8;
+        transition: opacity .2s linear;
         
         img {
             margin-left: 10px;
         }
         &:hover {
-            background-color: $header-hover;
+            opacity: 1;
         }
     }
 }
