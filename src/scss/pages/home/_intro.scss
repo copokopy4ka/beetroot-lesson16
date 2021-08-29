@@ -2,6 +2,7 @@
     padding: 95px 0 25px;
     background: linear-gradient(39deg, rgba(54,149,255,1) 0%,rgba(53,100,252,1) 100%);
     min-height: 100vh;
+    position: relative;
 
     @include breakpoint($mobile-bp) {
         padding: 120px 0 15px;
@@ -114,6 +115,8 @@
     &.active {
         .intro__form {
             visibility: visible;
+            transform: translateX(-50%) rotateX(0) rotateY(0deg);
+            opacity: 1;
             z-index: 1;
         }
         
@@ -127,17 +130,28 @@
         border-radius: 10px;
         padding: 65px;
         position: absolute;
-        top: 50%;
-        right: 50%;
-        transform: translateX(50%) translateY(-50%);
+        top: 90px;
+        left: 50%;
+        transform: translateX(-50%) rotateX(180deg) rotateY(180deg);
         display: flex;
         flex-direction: column;
         justify-content: center;
+        opacity: 0;
+        transition: all .5s linear;
 
         @include breakpoint($mobile-bp) {
-            padding: 25px;
+            width: 90%;
+            top: 100px;
+            padding: 50px;
+        }
+
+        @media screen and (max-width:450px) {
+            width: 100%;
+            top: 120px;
+            padding: 50px 25px;
         }
     }
+
     &__form-title {
         text-align: center;
         font-family: sans-serif;
@@ -160,21 +174,31 @@
         padding: 10px;
 
         @include breakpoint($mobile-bp) {
-            max-width: 70%;
-            width: 100%;
+            max-width: 100%;
         }
     }
+
     textarea {
-        margin-bottom: 45px;
+        margin-bottom: 60px;
+        height: 180px;
+        resize: none;
     }
+
     &__form-btn {
         max-width: 205px;
         padding: 15px 20px;
         border-radius: 25px;
         color: $white;
-        background-color: $header-hover;
+        background: linear-gradient(39deg, rgba(54,149,255,1) 0%,rgba(53,100,252,1) 100%);
+        background-color: transparent;
         margin: 0 auto;
+        transition: all .2s linear;
+
+        &:hover {
+            box-shadow: 0 0 3px 0 rgba(53, 100, 252, 1);
+        }
     }
+
     &__form-btn-close {
         position: absolute;
         background: none;
@@ -190,11 +214,13 @@
             border-bottom: 3px solid $header-hover;
             width: 100%;
         }
+
         &::before {
             top: 50%;
             right: 0;
             transform: rotate(45deg);
         }
+
         &::after {
             bottom: calc(50% - 3px);
             right: 0;
