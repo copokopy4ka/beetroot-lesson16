@@ -1,6 +1,7 @@
 .intro {
     padding: 95px 0 25px;
     background: linear-gradient(39deg, rgba(54,149,255,1) 0%,rgba(53,100,252,1) 100%);
+    min-height: 100vh;
 
     @include breakpoint($mobile-bp) {
         padding: 120px 0 15px;

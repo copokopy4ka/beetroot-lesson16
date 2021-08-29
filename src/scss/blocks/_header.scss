@@ -7,12 +7,16 @@
     padding: 85px 20px 0;
     visibility: hidden;
 
+    @include breakpoint($mobile-bp) {
+        padding: 115px 10px 0;
+    }
+
     &.active {
 
         .containerer {
             visibility: visible;
             opacity: 1;
-            transform: translateY(0);
+            transform: translateY(0) rotateX(0);
         }
         
         .header__lang-btn {
@@ -38,9 +42,6 @@
 
     .container {
         position: relative;
-        width: 100%;
-        max-width: 1170px;
-        margin: 0 auto;
     }
 
     .containerer {
@@ -48,38 +49,51 @@
         background-color: $white;
         border-radius: 10px;
         visibility: hidden;
-        transform: translateY(-100%);
+        transform: translateY(-50%) rotateX(90deg);
         opacity: 0;
-        transition: all ease-in-out 0.5s;
+        transition: all ease-in-out 0.3s;
     }
     
     &__nav {
         width: 100%;
         max-width: 420px;
-        padding: 0 10px;
         margin: 0 auto;
     }
+
     &__nav-list {
         list-style: none;        
         padding: 90px 20px 80px;
         border-bottom: 1px solid $header-ligth-grey;
+
+        @include breakpoint($mobile-bp) {
+            padding: 50px 10px 40px;
+        }
         
     }
     &__nav-item {
         padding-bottom: 50px;
         text-align: center;
+
+        @include breakpoint($mobile-bp) {
+            padding: 0 0 25px;
+        }
     }
     &__nav-link {
         font-family: $lato;
         font-size: 50px;
         font-weight: 300;
-        font-style: normal;
         color: $header-ligth-grey;
+        transition: color .2s linear;
+
+        @include breakpoint($mobile-bp) {
+            font-size: 24px;
+        }
 
         &:hover {
             color: $header-hover;
         }
     }
+
     &__social-list {
         list-style: none;
         width: 100%;
@@ -89,7 +103,12 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
+
+        @include breakpoint($mobile-bp) {
+            padding: 40px 0 60px;
+        }
     }
+
     &__social-link {
         display: flex;
         align-items: center;
@@ -100,10 +119,18 @@
         height: 51px;
         border-radius: 50%;
         font-size: 25px;
+        transition: all .2s linear;
+
+        @include breakpoint($mobile-bp) {
+            font-size: 15px;
+            width: 30px;
+            height: 30px;
+        }
+
 
         &:hover {
             background-color: $header-hover;
-            font-size: 30px;
+            font-size: 16px;
         }
     }
 
